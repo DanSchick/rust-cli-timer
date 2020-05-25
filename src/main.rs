@@ -45,7 +45,7 @@ fn is_seconds(input: &String) -> bool {
 fn progress_bar(seconds: u64) {
     let pb = ProgressBar::new(seconds);
      pb.set_style(ProgressStyle::default_bar()
-                 .template("{spinner:.green} [{elapsed_precise}] [{bar:80.cyan/blue}] ({eta})")
+                 .template("{spinner:.green} [{elapsed_precise}] [{bar:45.cyan/blue}] ({eta_precise})")
                          .progress_chars("#>-"));
 
     let one_second = time::Duration::from_secs(1);
